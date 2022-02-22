@@ -1,0 +1,23 @@
+.header {
+  background: rgb(2, 129, 214);
+  height: 50px;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+  
+}
+
+.menu-header {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  color: white
+}
+
+.menu-item:hover {
+  color: rgb(83, 181, 247);
+}
