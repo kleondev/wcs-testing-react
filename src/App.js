@@ -1,12 +1,18 @@
-import logo from './logo.svg';
+import React, {Fragment} from 'react';
 import './App.css';
-import Header from './pages/Header/Header';
 
+import Header from './pages/Header/Header';
+import MuduleRouter from './modules/Routers/MuduleRouter';
+
+import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
-    // <div className="App">
-      <Header/>
-    // </div>
+    <Fragment>
+      <BrowserRouter>
+        <Header/>
+        <MuduleRouter />
+      </BrowserRouter>
+    </Fragment>
   );
 }
 

@@ -8,13 +8,16 @@
   align-items: center;
   justify-content: end;
   height: 100%;
-  
 }
 
 .menu-header {
   cursor: pointer;
   font-size: 18px;
   font-weight: 600;
+}
+
+.menu-item {
+  text-decoration: none;
   color: white
 }
 
