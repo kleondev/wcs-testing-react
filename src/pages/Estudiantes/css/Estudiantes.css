@@ -1,0 +1,17 @@
+.title {
+  font-size: 25px !important;
+  font-weight: 600 !important;
+}
+
+.container-students {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 50px;
+}
+
+.MuiDataGrid-menuOpen {
+  visibility:visible !important;
+  margin-right: 0px !important;
+  margin-left: -50px !important;
+}
