@@ -10,10 +10,10 @@ import './css/Estudiantes.css'
 export default function Estudiantes() {
 
   const header = [
-    {id: 'name', headName: 'Name', align: 'left'}, 
-    {id: 'patronus', headName: 'Patronus', align: 'left'},
-    {id: 'age', headName: 'Age', align: 'left' },
-    {id: 'image', headName: 'image', align: 'center'}
+    { id: 'name', headName: 'Name', sort: true, align: 'left'}, 
+    { id: 'patronus', headName: 'Patronus', sort: true, align: 'left'},
+    { id: 'age', headName: 'Age', sort: true, align: 'left' },
+    { id: 'image', headName: 'Image', sort: false, align: 'center'}
   ];
 
   const [rows, setRows] = useState([]);

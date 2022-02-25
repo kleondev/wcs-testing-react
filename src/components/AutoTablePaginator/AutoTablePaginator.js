@@ -151,27 +151,30 @@ export default function TablePaginator(props) {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              {header.map((head, index) => (
-                <TableCell
-                  key={head.id}
-                  align={head.align} 
-                  sortDirection={orderBy === head.id ? order : false}
-                >
-                  <TableSortLabel
-                    active={orderBy === head.id}
-                    direction={orderBy === head.id ? order : 'asc'}
-                    onClick={createSortHandler(head.id)}
+              {header.map((head, index) => 
+                head.sort ? ( 
+                  <TableCell
+                    key={head.id}
+                    align={head.align} 
+                    sortDirection={orderBy === head.id ? order : false}
                   >
-                    {head.headName}
-                    {orderBy === head.id ? (
-                      <Box component="span" sx={visuallyHidden}>
-                        {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
-                      </Box>
-                      ) : null
-                    }
-                  </TableSortLabel>
-                </TableCell>
-              ))}
+                    <TableSortLabel
+                      active={orderBy === head.id}
+                      direction={orderBy === head.id ? order : 'asc'}
+                      onClick={createSortHandler(head.id)}
+                    >
+                      {head.headName}
+                      {orderBy === head.id ? (
+                        <Box component="span" sx={visuallyHidden}>
+                          {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
+                        </Box>
+                        ) : null
+                      }
+                    </TableSortLabel>
+                  </TableCell>
+                ) : 
+                (<TableCell key={head.id} align={head.align}> {head.headName} </TableCell>)
+              )}
             </TableRow>
           </TableHead>
           <TableBody>
